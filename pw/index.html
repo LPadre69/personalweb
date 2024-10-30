@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        canvas{
+            background-color: black;
+            border: solid gray 3px;
+        }
+        canvas:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Nicolas Polick</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">HOME</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SU DI ME</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOGLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTATTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <br>
+    <br>
+    <canvas id="fondo-canvas"></canvas>
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="imagenes/rostro.jpg" alt="">
+            </div>
+            <h1 style="color: #2e86c1;">Nicolas Yordan Polick</h1>
+            <br>
+            <h2>Front-end developer</h2>
+            <div class="redes">
+                <a href="mailto:nicolasypbv@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/nicolas-polick" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="Nicolas Polick (1).pdf" download target="_blank" title="CV"><i class="fa-solid fa-file"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2 style="color: #2e86c1;">Su di me</h2>
+            <p><span>Salve, sono Nicolas Polick.</span> Sono uno studente di programmazione che sta cercando di ampliare le sue conoscenze, questo è il mio sito personale dove potete trovare varie informazioni su di me e sulle mie attuali capacità, grazie per il vostro tempo, buona giornata.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Dato Personali</h3>
+                    <ul>
+                        <li>
+                            <strong>Nazionalità</strong>
+                            Peruviano
+                        </li>
+                        <li>
+                            <strong>Età</strong>
+                            25 anni
+                        </li>
+                        <li>
+                            <strong>Compleanno</strong>
+                            18-10-1999
+                        </li>
+                        <li>
+                            <strong>Cellulare</strong>
+                            +39 388 184 5601
+                        </li>
+                        <li>
+                            <strong>Mail</strong>
+                            nicolasypbv@gmail.com
+                        </li>
+                        <li>
+                            <strong>Indirizzo</strong>
+                            Torino-Corso Svizzera, Via Balangero
+                        </li>
+                        <li>
+                            <strong>Ruolo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Interesi</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>GIOCHI</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-film"></i>
+                            <span>FILM</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-android"></i>
+                            <span>ANDROID</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>SPORT</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBRI</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-kitchen-set"></i>
+                            <span>CUCINARE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>YOUTUBE</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button onclick="window.open('Nicolas Polick (1).pdf', '_blank')">
+                
+                Scaricare CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2 style="color: #2e86c1;">Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>TypeScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Photoshop</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Canvas</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicazione</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Lavoro di squadra</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatività</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedizione</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+     
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2 style="color: #2e86c1;">Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educazione</h3>
+                    <div class="item izq">
+                        <h4>Scuola Secondaria</h4>
+                        <span class="casa">I.E.P. Baldor</span>
+                        <span class="fecha">2011 - 2016</span>
+                        <p>Scuola secondaria nella mia città, il Perù, dove ho fatto anche le elementare, studi generali, matematica, scienze, storia, lingue, letteratura, arte, economia.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Linguaggio</h4>
+                        <span class="casa">ICPNA</span>
+                        <span class="fecha">2017 - 2019</span>
+                        <p>Ho studiato all'istituto privato di lingue straniere, inglese, livello personale B2, ho studiato lì per un paio d'anni imparando le basi ed i modi intermedi di coniugare parole e frasi in inglese, oggi lo parlo spesso.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Informatica-Programmazione</h4>
+                        <span class="casa">UDEMY</span>
+                        <span class="fecha">2023 - 2024</span>
+                        <p>Ho studiato nell'università online udemy le basi della programmazione e mi sto addentrando in questo mondo, partendo dal front-end per poi passare al back-end, conoscenze in JavaScript, TScript, JSreact, HTML5, CSS3, studiando Angular/wordpress, conoscenza di photoshop, editing video e social media, office package.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Esperienza lavorativa</h3>
+                    <div class="item der">
+                        <h4>Consulente telefonico</h4>
+                        <span class="casa">Konecta BTO 03/19 - 04/20 Lima-Perú
+                        </span>
+                        <span class="fecha">2019 - 2020</span>
+                        <p>Ho lavorato come operatore inbound per l’assistenza e
+                            la risoluzione dei problemi dei clienti, inoltre come formatore
+                            del personale interno e responsabile della qualità delle
+                            chiamate.
+                            </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Consulente telefonico</h4>
+                        <span class="casa">MDY International Business 10/20 - 04/22 Lima-Perú</span>
+                        <span class="fecha">2020 - 2022</span>
+                        <p>Ho lavorato come operatore inbound per l’assistenza al
+                            servizio di telefonia mobile.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Consulente telefonico</h4>
+                        <span class="casa">ATENTO S.A.C. 06/22 - 06/23 Lima-Perú</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>Ho lavorato come operatore outbound fidelizzando i
+                            clienti offrendo soluzioni prima che sorgano i problemi,
+                            gestendo la base dati dei clienti e fornendo assistenza
+                            sistematica ai dipendenti.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2 style="color: #2e86c1;">PORTAFOGLIO</h2>
+            <div class="galeria">
+                
+                <div class="proyecto">
+                    <img src="imagenes/ingresos-egresos.png" alt="Tabella delle entrate e delle uscite.">
+                    <div class="overlay">
+                        <h3>Tabella delle entrate e delle uscite</h3>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="imagenes/plantilla.png" alt="Esempio di pagina aziendale.">
+                    <div class="overlay">
+                        <h3>Esempio di pagina aziendale</h3>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="imagenes/formu.png" alt="Modulo di esempio.">
+                    <div class="overlay">
+                        <h3>Modulo di esempio</h3>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="imagenes/dipsec.png" alt="Diploma di scuola secondaria.">
+                    <div class="overlay">
+                        <h3>Diploma di scuola secondaria</h3>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="imagenes/udemy_canva_certificado.png" alt="Certificato javaScript accelerato.">
+                    <div class="overlay">
+                        <h3>Certificato JavaScript accelerato</h3>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="imagenes/mimo-front-end_certificado.png" alt="Certificato Front-end developer." style="height: 250px; width: 250px;">
+                    <div class="overlay">
+                        <h3>Certificato Front-end developer</h3>
+                    </div>
+                </div>
+                <br>
+               <div>
+
+                <canvas id="canvas" width="790" height="500"></canvas>
+                <audio id="boing">
+                    <source src="sonidos/boing.mp3">
+                    <source src="sonidos/boing.ogg">
+                </audio>
+                <audio id="disparo">
+                    <source src="sonidos/disparo.mp3">
+                    <source src="sonidos/disparo.ogg">
+                </audio>
+                <audio id="intro">
+                    <source src="sonidos/intro.mp3">
+                    <source src="sonidos/intro.ogg">
+                </audio>
+                <audio id="fin">
+                    <source src="sonidos/gameOver.mp3">
+                    <source src="sonidos/gameOver.ogg">
+                </audio>
+
+
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <form id="contacto" class="contacto" method="post" data-netlify="true" name="contacto">
+        <input type="hidden" name="form-name" value="contacto">
+        <div class="contenido-seccion">
+            <h2 style="color: #2e86c1;">CONTATTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" name="nombre" placeholder="Tuo nome" required>
+                    <input type="text" name="telefono" placeholder="Numero di telefono" required>
+                    <input type="email" name="email" placeholder="Indirizzo di mail" required>
+                    <input type="text" name="tema" placeholder="Oggetto" required>
+                    <textarea name="mensaje" cols="30" rows="10" placeholder="Messaggio" required></textarea>
+                    <button type="submit">
+                        Invia il messaggio <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="imagenes/direccion.png" alt="Indirizzo">
+                    <br>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                TORINO-Corso Svizzera, via balangero
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Chiamami: +39 388 184 5601
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Mail: nicolasypbv@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="mailto:nicolasypbv@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/nicolas-polick" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="Nicolas Polick (1).pdf" download target="_blank" title="CV"><i class="fa-solid fa-file"></i></a>
+        </div>
+    </footer>
+    <script src="interactive spider.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('keydown', function(event) {
+    // Verifica si la tecla presionada es la barra espaciadora
+    if (event.code === 'Space') {
+        event.preventDefault(); // Evita el scroll hacia abajo
+        
+    }
+});
+
+function disparar() {
+    console.log("¡Disparo!"); // Aquí coloca tu lógica de disparo
+}
+
+    let game = {
+            canvas: null,
+            ctx: null,
+            imagen: null,
+            caratula: true,
+            imagenEnemigo: null,
+            teclaPulsada: null,
+            tecla:[],
+            colorBala: 'blue',
+            colorBala2: 'red',
+            balas_array: new Array(),
+            balas_enemigas_array: new Array(),
+            enemigos_array: new Array(),
+            disparo: false,
+            puntos: 0,
+            finJuego: false,
+            boing:null,
+            disparoJugador: null,
+            intro:null,
+            fin:null,
+            restartPosition: null
+        }
+
+        const KEY_ENTER = 13;
+        const KEY_LEFT = 37;
+        const KEY_UP = 38;
+        const KEY_RIGHT = 39;
+        const KEY_DOWN = 40;
+        const BARRA = 32;
+
+
+        function Bala(x,y,w){
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.dibujar = function (){
+                game.ctx.save();
+                game.ctx.fillStyle = game.colorBala;
+                game.ctx.fillRect(this.x, this.y, this.w, this.w);
+                this.y = this.y-4;
+                game.ctx.restore();
+            }
+            
+            this.disparar = function (){
+                game.ctx.save();
+                game.ctx.fillStyle = game.colorBala2;
+                game.ctx.fillRect(this.x, this.y, this.w, this.w);
+                this.y = this.y+6; //donde va la bala
+                game.ctx.restore();
+            }
+        }
+        function Jugador(){
+            this.x = x;
+            this.y = 450;
+            this.w = 30;
+            this.h = 15;
+            this.dibujar = function(x){
+                this.x = x;
+                game.ctx.drawImage(game.imagen, this.x, this.y, this.w, this.h);
+            }
+        }
+        function Enemigo(x,y){
+            this.x = x;
+            this.y = y;
+            this.w = 35;
+            this.veces = 0;
+            this.dx = 5;
+            this.ciclos = 0;
+            this.num = 14;
+            this.figura = true;
+            this.vive = true;
+            this.dibujar = function(){
+
+                //retraso
+                if(this.ciclos > 30){
+                    //saltos
+                    if(this.veces>this.num){
+                        this.dx *= -1;
+                        this.veces = 0;
+                        this.num = 28;
+                        this.y += 20;
+                        this.dx = (this.dx>0)? this.dx++ : this.dx--;
+
+                    }
+                    else {
+                        this.x += this.dx;
+                    }
+                    this.veces ++;
+                    this.ciclos = 0;
+                    this.figura = !this.figura
+
+                }
+                else {
+                    this.ciclos++;
+
+                }
+                if(this.figura){
+                    game.ctx.drawImage(game.imagenEnemigo, 0, 0, 40, 30, this.x, this.y, 35, 30)
+
+                }
+                else{
+                    game.ctx.drawImage(game.imagenEnemigo, 50, 0, 35, 30, this.x, this.y, 35, 30)
+                }
+             }
+         
+        }
+        const caratula = () => {
+            let imagen = new Image();
+            imagen.src = "imagenes/cara.webp";
+            imagen.onload = () => {
+                const imagenwid = game.canvas.width;
+                const imagenhei = game.canvas.height;
+                game.ctx.drawImage(imagen, 0, 0,imagenwid, imagenhei)
+            }
+            
+        }
+        const seleccionar1 = (e) => {
+            if(game.caratula){
+                inicio();
+            }
+        }
+        const inicio = () => {
+            game.ctx.clearRect(0, 0,game.canvas.width, game.canvas.height);
+            game.caratula = false;
+            game.jugador = new Jugador(0);
+            game.x = game.canvas.width / 2;
+            game.jugador.dibujar(game.x);
+            game.intro.play();
+            animar();
+            
+            
+        }
+
+
+
+        let x = 100;
+        let y = 100;
+        const animar = () =>{
+            if(game.finJuego == false){
+            requestAnimationFrame(animar)
+            verificar();
+            pintar();
+            colisiones();
+            
+        } 
+    }
+    
+    const colisiones = () => {
+    let enemigo = null;
+    let bala = null;
+
+    // Colisiones entre balas y enemigos
+    for (let i = 0; i < game.enemigos_array.length; i++) {
+        for (let j = 0; j < game.balas_array.length; j++) {
+            enemigo = game.enemigos_array[i];
+            bala = game.balas_array[j];
+            if (enemigo != null && bala != null) {
+                if ((bala.x > enemigo.x) &&
+                    (bala.x < enemigo.x + enemigo.w) && 
+                    (bala.y > enemigo.y) &&
+                    (bala.y < enemigo.y + enemigo.w)) {
+                    enemigo.vive = false;
+                    game.enemigos_array[i] = null;
+                    game.balas_array[j] = null;
+                    game.disparo = false;
+                    game.puntos += 10;
+                    game.boing.play();
+                    verificarFinDeJuego();
+                }
+            }
+        }
+    }
+
+    // Colisiones balas enemigas
+    for (let j = 0; j < game.balas_enemigas_array.length; j++) {
+        bala = game.balas_enemigas_array[j];
+        if (bala != null) {
+            // Asegúrate de usar el ancho y altura correctos del jugador
+            if ((bala.x > game.jugador.x) &&
+                (bala.x < game.jugador.x + game.jugador.w) && 
+                (bala.y > game.jugador.y) && 
+                (bala.y < game.jugador.y + game.jugador.h)) {
+                gameOver(); // Cambia el estado del juego a "Game Over"
+            }
+        }
+    }
+}
+    const verificarFinDeJuego = () => {
+    const enemigosRestantes = game.enemigos_array.filter(enemigo => enemigo !== null);
+    if(enemigosRestantes.length === 0){
+        gameOver();
+    }
+}
+    const gameOver = () => {
+        game.ctx.clearRect(0,0, game.canvas.width, game.canvas.height);
+        game.balas_array = [];
+        game.enemigos_array= [];
+        game.balas_enemigas_array = [];
+        game.finJuego = true;
+        game.intro.pause();
+        game.intro.currentTime = 0;
+        game.fin.play();
+        mensaje('Game Over', 100, 40);
+        mensaje('You get: ' + game.puntos + ' points!', 220, 40);
+        resetear('Restard', 700, 420, 100, 70);
+       if(game.puntos>200 && game.puntos<= 449){
+            mensaje('so close!', 40);
+            mensaje('You get: ' + game.puntos + ' points!', 40);
+        }
+        else if(game.puntos>=450){
+            mensaje('Congrats! u won!!', 340, 40)
+        }
+        else{
+            mensaje('try again', 340, 40)
+        }
+    }
+    const mensaje = (cadena, y, tamaño, ) => {
+        let medio = (game.canvas.width)/2;
+        game.ctx.save();
+        game.ctx.fillStyle = 'green';
+        game.ctx.strokeStyle = 'blue';
+        game.ctx.textBaseline = 'top';
+        game.ctx.font = 'bold ' + tamaño + 'px Courier';
+        game.ctx.textAlign = 'center';
+        game.ctx.fillText(cadena, medio, y);
+        game.ctx.restore();
+    }
+    const resetear = (cadena, x, y, w, tamaño) => {
+        game.ctx.save();
+        game.ctx.fillStyle = 'green';
+        game.ctx.strokeStyle = 'blue';
+        game.ctx.textBaseline = 'top';
+        game.ctx.font = 'bold ' + tamaño + 'px Courier';
+        game.ctx.textAlign = 'center';
+        game.ctx.fillText(cadena, x, y, w, tamaño);
+        const textWidth = game.ctx.measureText(cadena).width;
+
+    // Actualizar la posición del área de clic
+    game.restartPosition = { x: x - textWidth / 5, y: y, width: textWidth/2, height: tamaño };
+    
+        game.ctx.restore();
+        
+    }
+    const reiniciarJuego = () => {
+    game.finJuego = false; // Reinicia el estado del juego
+    game.puntos = 0; // Reinicia los puntos
+    game.balas_array = [];
+    game.enemigos_array = [];
+    game.balas_enemigas_array = [];
+    game.disparo = false;
+    
+    // Vuelve a inicializar el jugador y enemigos
+    game.jugador = new Jugador(0);
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 10; j++) {
+            game.enemigos_array.push(new Enemigo(100 + 40 * j, 30 + 45 * i));
+        }
+    }
+
+    animar(); // Reinicia la animación del juego
+    game.intro.play();
+    game.fin.pause();
+    game.fin.currentTime = 0;
+}
+
+  
+
+
+        const verificar = () => {
+
+            if(game.tecla[KEY_RIGHT]) game.x+=10;
+            if(game.tecla[KEY_LEFT]) game.x-=10;
+
+            //verificando cañon
+            if(game.x>game.canvas.width - 10) game.x = game.canvas.width -5;
+            if(game.x<10) game.x = 10;
+
+            if(game.x>game.canvas.width - 50) game.x = game.canvas.width -45;
+
+            //disparo
+            if(game.tecla[BARRA]){
+
+                if(game.disparo == false) {
+                game.balas_array.push(new Bala(game.jugador.x + 12, game.jugador.y - 3, 5));
+                game.tecla[BARRA] = false;
+                game.disparo=true;
+                game.disparoJugador.play()
+            }
+            }
+            //disparo enemigo
+            if(Math.random()>0.96){
+                dispararEnemigos()
+            }
+            
+
+
+
+                }
+                const dispararEnemigos = () => {
+                    let ultimos = new Array();
+                    for(let i = game.enemigos_array.length-1; i > 0; i--){
+                        if(game.enemigos_array[i]!=null){
+                            ultimos.push(i);
+                        }
+                        if(ultimos.length == 10) break;
+                    }
+                    d = ultimos[Math.floor(Math.random()*10)];
+                    game.balas_enemigas_array.push(new Bala(game.enemigos_array[d].x+game.enemigos_array[d].w/2, game.enemigos_array[d].y, 5 ));
+                }
+                const pintar = () => {
+                    game.ctx.clearRect(0,0,game.canvas.width, game.canvas.height );
+                    score();
+                    game.jugador.dibujar(game.x);
+
+
+                     //balas
+                for(let i = 0; i<game.balas_array.length; i++){
+                    if(game.balas_array[i]!=null){
+                        game.balas_array[i].dibujar();
+                        if(game.balas_array[i].y<0) {
+                            game.disparo = false;
+                            game.balas_array[i] =null
+                        }
+                    }
+                }
+                //balas enemigas
+                for(let i=0; i < game.balas_enemigas_array.length; i++){
+                    if(game.balas_enemigas_array[i]!= null){
+                        game.balas_enemigas_array[i].disparar();
+                        if(game.balas_enemigas_array[i].y>game.canvas.height){
+                            game.balas_enemigas_array[i] = null
+                        }
+                    }
+                    
+                }
+
+                //enemigos
+                for(let i = 0; i < game.enemigos_array.length; i++){
+                    if(game.enemigos_array[i] != null) {
+                    game.enemigos_array[i].dibujar()
+                    }
+                }
+                }
+                const score = () => {
+                    game.ctx.save();
+                    game.ctx.fillStyle = 'white';
+                    game.ctx.font = 'bold 20px Courier';
+                    game.ctx.fillText('SCORE: ' + game.puntos, 10, 20);
+                    game.ctx.restore();
+                }
+
+               
+
+                    //*********listeners************
+                    document.addEventListener('keydown', function(e){
+                        game.teclaPulsada=e.keyCode;
+                        game.tecla[e.keyCode] = true;
+                    })
+                
+
+                document.addEventListener('keyup', function(e){
+                        game.teclaPulsada=e.keyCode;
+                        game.tecla[e.keyCode] = false;
+                    })
+                
+
+        window.requestAnimationFrame = (function(){
+            return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimatonFrame ||
+            function(callback){ window.setTimeout(callback, 17);}
+        })();
+
+
+
+        window.onload=function(){
+            game.canvas = document.getElementById("canvas");
+            if(game.canvas && game.canvas.getContext){
+                game.ctx = canvas.getContext('2d');
+                if(game.ctx){
+
+                    //sonidos
+                    game.boing = document.getElementById('boing');
+                    game.disparoJugador = document.getElementById('disparo');
+                    game.intro = document.getElementById('intro');
+                    game.fin =document.getElementById('fin');
+
+
+
+
+
+
+                    game.imagen = new Image();
+                    game.imagen.src = 'imagenes/torre.fw.png';
+
+                    //enemigos
+                    game.imagenEnemigo = new Image();
+                    game.imagenEnemigo.src = 'imagenes/invader.fw.png';
+                    game.imagenEnemigo.onload=function(){
+                        //numero de filas
+                        for(let i = 0; i< 5; i++){
+                            for(let j = 0; j <10; j++){
+                                game.enemigos_array.push(new Enemigo(100 + 40 *j, 30+45*i));
+                            }
+                        }
+
+                    }
+
+
+
+                    caratula();
+                    game.canvas.addEventListener('click', seleccionar1,false);
+
+
+                      // Agregar un evento de clic al canvas
+game.canvas.addEventListener('click', function (e) {
+    // Obtener las coordenadas del clic
+    const rect = game.canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Verificar si se hizo clic en "Restart"
+    if (game.finJuego && 
+        x >= game.restartPosition.x && 
+        x <= game.restartPosition.x + game.restartPosition.width && 
+        y >= game.restartPosition.y && 
+        y <= game.restartPosition.y + game.restartPosition.height) {
+        reiniciarJuego(); // Llama a la función para reiniciar el juego
+    }
+});
+
+
+                    
+
+                }
+                else{
+                    alert('no corre canvas')
+                }
+            }
+        }
+    </script>
+</body>
+</html>
